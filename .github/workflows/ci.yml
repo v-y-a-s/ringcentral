@@ -19,6 +19,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: yarn test
+        continue-on-error: true
         env:
           TEST_HEADLESS: true
           TEST_HOST_URI: http://localhost:8080
