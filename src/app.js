@@ -170,6 +170,10 @@ window.phone = phone;
 
 window.addEventListener('message', (e) => {
   const data = e.data;
+  console.log('==============================');
+  console.log(data.type);
+  console.log(data?.call);
+  console.log('==============================');
   if (data) {
     switch (data.type) {
       case 'rc-call-ring-notify':
